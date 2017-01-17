@@ -1,17 +1,25 @@
 var gulp = require('gulp'),
-watch = require('gulp-watch');
+watch = require('gulp-watch'),
+postcss = require('gulp-postcss'),
+autoprefixer = require('autoprefixer'),
+cssvars = require('postcss-simple-vars'),
+nested = require('postcss-nested');
 
 gulp.task('default', function() {
   console.log("Hooray - you created a Gulp task.");
-})
+});
 
 gulp.task('html', function() {
   console.log("Imagine something useful being done to your HTML here.");
-})
+});
 
+// return is used so gulp is aware when the function completes.
+// postcss() is actually expecting an array
 gulp.task('styles', function() {
-  console.log("Imagine Sass or PostCss tasks running here.");
-})
+  return gulp.src('app/assets/styles/styles.css')
+    .pipe(postcss([cssvars, nested, autoprefixer]))
+    .pipe(gulp.dest('app/temp/styles'));
+});
 
 gulp.task('watch', function() {
 
