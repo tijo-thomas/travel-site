@@ -472,14 +472,33 @@ img {
 
 .large-hero {
   position: relative;
+
 }
 
+/*
+  The & is a PostCSS trick so we can nest
+  selectors, but not have them compiled into
+  descendant selectors. This follows BEM methodology.
+  */
+
 .large-hero__text-content {
-  position: absolute; /* positions this element relative to its container */
+  position: absolute;/* positions this element relative to its container */
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 0;
   width: 100%;
   text-align: center;
+}
+
+.large-hero__title {
+  font-weight: 300;
+  color: #2f5572;
+  font-size: 4.8rem;
+}
+
+.large-hero__subtitle {
+  font-weight: 300;
+  color: #2f5572;
+  font-size: 2.9rem;
 }
