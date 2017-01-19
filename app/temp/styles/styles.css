@@ -518,4 +518,7 @@ img {
 .btn {
   background-color: #2f5572;
   color: #fff;
+  text-decoration: none;
+  padding: .75rem 1.2rem;
+  display: inline-block; /* Change from inline so parent and other elements recognize vert. padding. */
 }
