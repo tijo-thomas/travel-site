@@ -29,4 +29,14 @@
     margin: 0;
   }
 
+  &__description {
+    color: #fff;
+    font-size: 1.875rem; /* 1.875 * 16 = 30 */
+    font-weight: 100;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+    max-width: 30rem; /* 480px / 16px = 30rem */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
