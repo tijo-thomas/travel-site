@@ -471,8 +471,15 @@ img {
 }
 
 .large-hero {
+  border-bottom: 10px solid #2f5572;
   position: relative;
 
+}
+
+/*Treats image as block to remove gap before border.*/
+
+.large-hero__image {
+  display: block;
 }
 
 /*
@@ -495,24 +502,10 @@ img {
   font-weight: 300;
   color: #2f5572;
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 2.4rem;
 }
 
 @media (min-width: 530px) {
-
-  .large-hero__title {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 800px) {
-
-  .large-hero__title {
-    font-size: 3.2rem;
-  }
-}
-
-@media (min-width: 1200px) {
 
   .large-hero__title {
     font-size: 4.8rem;
@@ -522,7 +515,7 @@ img {
 .large-hero__subtitle {
   font-weight: 300;
   color: #2f5572;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   margin: 0;
 }
 
@@ -535,12 +528,19 @@ img {
 
 .large-hero__description {
   color: #fff;
-  font-size: 1.875rem;/* 1.875 * 16 = 30 */
+  font-size: 1.1rem;
   font-weight: 100;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
   max-width: 30rem;/* 480px / 16px = 30rem */
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 530px) {
+
+  .large-hero__description {
+    font-size: 1.875rem;/* 1.875 * 16 = 30 */
+  }
 }
 
 .btn {
@@ -558,42 +558,19 @@ img {
 }
 
 .btn--large {
-  font-size: 1.25rem;
   padding: 1.1rem 1.9rem;
 }
 
-.headline {
-  font-weight: 300;
-  font-size: 2.875rem;
-  color: #2f5572;
+@media (min-width: 530px) {
+
+  .btn--large {
+    font-size: 1.25rem;
+  }
 }
 
-.headline--centered {
-  text-align: center;
+@media @import "modules/_headline.css" {
+.wrapper {
+  padding-left: 18px;
+  padding-right: 18px;
 }
-
-.headline--orange {
-  color: #d59541;
-}
-
-.headline--small {
-  font-size: 1.875rem;
-}
-
-.headline--narrow {
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.headline--light {
-  font-weight: 100;
-}
-
-.headline--b-margin-small {
-  margin-bottom: .5em;
-}
-
-.headline--b-margin-large {
-  margin-bottom: 1.6em;
 }
