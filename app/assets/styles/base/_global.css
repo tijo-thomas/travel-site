@@ -7,3 +7,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/*Does NOT include padding and border in calculation of width/height of an element.*/
+* {
+  box-sizing: border-box;
+}
