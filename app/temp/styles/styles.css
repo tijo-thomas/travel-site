@@ -476,6 +476,10 @@ img {
   box-sizing: border-box;
 }
 
+a {
+  color: #d59541;
+}
+
 .large-hero {
   border-bottom: 10px solid #2f5572;
   position: relative;
@@ -671,6 +675,10 @@ img {
   margin-bottom: 1.6em;
 }
 
+.headline--no-t-margin {
+  margin-top: 0;
+}
+
 .row::after {
   content: "";
   clear: both;
@@ -681,9 +689,23 @@ img {
   margin-right: -65px;
 }
 
+/*Selects all direct children of --gutters.*/
+
+.row--gutters > div {
+  padding-right: 65px;
+}
+
+.row__b-margin-until-medium {
+  margin-bottom: 1rem;
+}
+
 /*Adds 2 column layout on medium screens.*/
 
 @media (min-width: 800px) {
+
+  .row__b-margin-until-medium {
+    margin-bottom: 0;
+  }
 
   .row__medium-4 {
     float: left;
@@ -704,8 +726,18 @@ img {
   }
 }
 
-/*Selects all direct children of --gutters.*/
+.generic-content-container p {
+  line-height: 1.65;
+  margin: 1.8rem 0;
+}
 
-.row--gutters > div {
-  padding-right: 65px;
+@media (min-width: 530px) {
+
+  .generic-content-container p {
+    font-size: 1.125rem;
+  }
+}
+
+.generic-content-container p a {
+  font-weight: 700;
 }
