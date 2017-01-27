@@ -692,12 +692,20 @@ a {
   display: table;
 }
 
+.row--t-padding {
+  padding-top: 80px;
+}
+
 .row--gutters {
   margin-right: -65px;
 }
 
 .row--gutters-large {
   margin-right: -100px;
+}
+
+.row--gutters-small {
+  margin-right: -45px;
 }
 
 /*Selects all direct children of --gutters.*/
@@ -708,6 +716,10 @@ a {
 
 .row--gutters-large > div {
   padding-right: 100px;
+}
+
+.row--gutters-small > div {
+  padding-right: 45px;
 }
 
 .row__b-margin-until-medium {

@@ -2,12 +2,20 @@
 
   @mixin clearfix;
 
+  &--t-padding {
+    padding-top: 80px;
+  }
+
   &--gutters {
     margin-right: -65px;
   }
 
   &--gutters-large {
     margin-right: -100px;
+  }
+
+  &--gutters-small {
+    margin-right: -45px;
   }
 
   /*Selects all direct children of --gutters.*/
@@ -17,6 +25,10 @@
 
   &--gutters-large > div {
     padding-right: 100px;
+  }
+
+  &--gutters-small > div {
+    padding-right: 45px;
   }
 
   &__b-margin-until-medium {
