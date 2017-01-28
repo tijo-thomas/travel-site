@@ -1021,8 +1021,10 @@ a {
   margin: .25rem 0 1rem 0;
 }
 
+/* Do not edit modules/_sprite directly as it is generated automatically by Gulp. Instead, edit gulp/templates/sprite. */
+
 .icon {
-      background-image: url('/temp/sprite/css/svg/sprite.css-0f9283b3.svg'); /* Points to the sprite svg file. */
+      background-image: url('/assets/images/sprites/sprite-0f9283b3.svg'); /* Points to the sprite svg file. */
     }
 
 .icon--clear-view-escapes {
