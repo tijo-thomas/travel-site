@@ -1144,6 +1144,10 @@ a {
   top: 0;
 }
 
+.site-header__logo__graphic {
+  text-indent: -9999px;
+}
+
 .primary-nav--pull-right {
   float: right;
 }

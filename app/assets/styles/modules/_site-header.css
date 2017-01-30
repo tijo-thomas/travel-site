@@ -16,4 +16,8 @@
     padding: 25px 36px;
     top: 0;
   }
+
+  &__logo__graphic {
+    text-indent: -9999px;
+  }
 }
