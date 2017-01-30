@@ -19,6 +19,11 @@
     left: 0;
     width: 100%;
     text-align: center;
+    padding-top: 88px; /* Accounts for logo on small screen. */
+
+    @mixin atMedium {
+      padding-top: 60px; /* Accounts for header nav. */
+    }
   }
 
   &__title {
