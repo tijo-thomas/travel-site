@@ -1198,12 +1198,38 @@ a {
 
 .site-header__menu-icon {
   width: 20px;
-  height: 20px;
-  background-color: #fff;
+  height: 19px;
   position: absolute;
   z-index: 10;/* Stacks icon above menu-content below. */
   top: 10px;
   right: 10px;
+}
+
+.site-header__menu-icon__top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.site-header__menu-icon__middle {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.site-header__menu-icon__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
 }
 
 @media (min-width: 800px) {
