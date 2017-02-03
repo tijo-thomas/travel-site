@@ -1138,7 +1138,17 @@ a {
   position: absolute;
   width: 100%;
   z-index: 2;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 
+}
+
+.site-header--is-expanded {
+  background-color: rgba(47,85,114, .55);
 }
 
 @media (min-width: 800px) {
@@ -1148,8 +1158,11 @@ a {
   }
 }
 
-.site-header__btn-container {
-  float: right;
+@media (min-width: 800px) {
+
+  .site-header__btn-container {
+    float: right;
+  }
 }
 
 /* The position rule allows the height of header bar to be determined by the nav content. */
@@ -1188,6 +1201,7 @@ a {
   height: 20px;
   background-color: #fff;
   position: absolute;
+  z-index: 10;/* Stacks icon above menu-content below. */
   top: 10px;
   right: 10px;
 }
@@ -1202,22 +1216,55 @@ a {
 /* Removes nav links and button unless medium screen. */
 
 .site-header__menu-content {
-  display: none;
+  opacity: 0;/* Sets up to fade in menu content. */
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  position: relative;/* z-index requires position property. */
+  z-index: -10;/* Added because changing display:none to opacity:0 means content still exists in browser, so z-index puts it under everything. */
+  padding-top: 90px;
+  text-align: center;
 }
 
 @media (min-width: 800px) {
 
   .site-header__menu-content {
-    display: block;
+    opacity: 1;
+    z-index: 1;
+    padding-top: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 .site-header__menu-content--is-visible {
-  display: block;
+  opacity: 1;
+  z-index: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
-.primary-nav--pull-right {
-  float: right;
+.primary-nav {
+  padding-top: 10px;
+}
+
+@media (min-width: 800px) {
+
+  .primary-nav {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .primary-nav--pull-right {
+    float: right;
+  }
 }
 
 .primary-nav ul {
@@ -1233,8 +1280,30 @@ a {
 
 .primary-nav li {
   list-style: none;
-  float: left;
-  padding-right: 20px;
+  display: inline-block;
+  padding-right: 7px;
+}
+
+@media (min-width: 800px) {
+
+  .primary-nav li {
+    padding-right: 20px;
+    float: left;
+    display: block;
+  }
+}
+
+/* Final list item in the list. */
+
+.primary-nav li:last-child {
+  padding-right: 0;
+}
+
+@media (min-width: 800px) {
+
+  .primary-nav li:last-child {
+    padding-right: 20px;
+  }
 }
 
 .primary-nav a {
@@ -1242,5 +1311,16 @@ a {
   text-decoration: none;
   font-weight: 300;
   display: block;
-  padding: 12px 0;
+  padding: 5px 8px;
+  font-size: .8rem;
+  background-color: rgba(47,85,114, .5);
+}
+
+@media (min-width: 800px) {
+
+  .primary-nav a {
+    font-size: 1rem;
+    padding: 12px 0;
+    background-color: transparent;
+  }
 }
