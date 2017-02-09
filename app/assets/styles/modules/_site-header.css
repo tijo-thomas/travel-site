@@ -44,7 +44,7 @@
 
       /* Targets logo only when dark header is being used. */
       .site-header--dark & {
-        transform: scale(.57);
+        transform: scale(.56);
       }
     }
   }
