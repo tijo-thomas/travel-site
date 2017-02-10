@@ -24,6 +24,7 @@
 
 ;(function(window, document, undefined){
   var tests = [];
+  
 
   /**
    *
@@ -72,6 +73,7 @@
     }
   };
 
+  
 
   // Fake some of Object.create so we can force non test results to be non "own" properties.
   var Modernizr = function() {};
@@ -81,7 +83,10 @@
   // Overwrite name so constructor name is nicer :D
   Modernizr = new Modernizr();
 
+  
+
   var classes = [];
+  
 
   /**
    * is returns a boolean if the typeof an obj is exactly type.
@@ -177,6 +182,7 @@
    */
 
   var docElement = document.documentElement;
+  
 
   /**
    * A convenience helper to check if the document we are running in is an SVG document
@@ -186,6 +192,7 @@
    */
 
   var isSVG = docElement.nodeName.toLowerCase() === 'svg';
+  
 
   /**
    * setClasses takes an array of class names and adds them to the root element
@@ -239,10 +246,11 @@
    */
 
   var omPrefixes = 'Moz O ms Webkit';
-
+  
 
   var cssomPrefixes = (ModernizrProto._config.usePrefixes ? omPrefixes.split(' ') : []);
   ModernizrProto._cssomPrefixes = cssomPrefixes;
+  
 
 
   /**
@@ -301,6 +309,8 @@
     delete modElem.elem;
   });
 
+  
+
   var mStyle = {
     style: modElem.elem.style
   };
@@ -311,6 +321,7 @@
     delete mStyle.style;
   });
 
+  
 
   /**
    * getBody returns the body of a document, or an element that can stand in for
@@ -599,6 +610,7 @@
 
   var domPrefixes = (ModernizrProto._config.usePrefixes ? omPrefixes.toLowerCase().split(' ') : []);
   ModernizrProto._domPrefixes = domPrefixes;
+  
 
   /**
    * fnBind is a super small [bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) polyfill.
@@ -693,6 +705,7 @@
   // Modernizr.testAllProps('boxSizing')
   ModernizrProto.testAllProps = testPropsAll;
 
+  
 
   /**
    * testAllProps determines whether a given CSS property is supported in the browser
@@ -735,6 +748,7 @@
     return testPropsAll(prop, undefined, undefined, value, skipValueTest);
   }
   ModernizrProto.testAllProps = testAllProps;
+  
 /*!
 {
   "name": "Flexbox",
